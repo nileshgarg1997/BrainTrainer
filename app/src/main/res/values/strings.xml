@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BrainTrainer Pro</string>
+    <string name="Instruction">Playing Instructions</string>
+    <string name="Timer">1.Timer is seen on the upper left corner of the screen and the time limit is 30 seconds.</string>
+    <string name="Score">2.ScoreBox is seen on the upper right corner of the screen and will be updated on every correct/incorrect answer.</string>
+    <string name="Question">3.Question is in the middle of Timer and Scorebox.</string>
+    <string name="Options">4.There are four options,choose the correct one.</string>
+    <string name="Motivation">5.Score as high as you can,keep training your mind using BrainTrainer Pro App! </string>
+</resources>

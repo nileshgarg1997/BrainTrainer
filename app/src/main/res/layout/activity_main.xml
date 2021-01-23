@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timerTv"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="#ff8833"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="30s"
+        android:textColor="@color/white"
+        android:textSize="30dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/question"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="30+30"
+        android:textStyle="bold"
+        android:textSize="40dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#ff8833"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="30/30"
+        android:textColor="@color/white"
+        android:textSize="30dp">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/gameRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="100dp">
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:id="@+id/bt1"
+                android:tag="0"
+                android:onClick="btnClick"
+                android:gravity="center"
+                android:background="#fff333"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="15"
+                android:textSize="75dp"
+                android:layout_columnWeight="1">
+
+            </Button>
+            <Button
+                android:id="@+id/bt2"
+                android:tag="1"
+                android:onClick="btnClick"
+                android:background="#ff3233"
+                android:gravity="center"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:text="15"
+                android:layout_columnWeight="1"
+                android:textSize="75dp">
+
+            </Button>
+            <Button
+                android:id="@+id/bt3"
+                android:tag="2"
+                android:onClick="btnClick"
+                android:background="#ff20f3"
+                android:gravity="center"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="15"
+                android:layout_columnWeight="1"
+                android:textSize="75dp">
+
+            </Button>
+            <Button
+                android:id="@+id/bt4"
+                android:tag="3"
+                android:background="#00f333"
+                android:gravity="center"
+                android:layout_column="1"
+                android:onClick="btnClick"
+                android:layout_row="1"
+                android:text="15"
+                android:layout_columnWeight="1"
+                android:textSize="75dp">
+
+            </Button>
+
+
+        </GridLayout>
+</RelativeLayout>
+
+    <Button
+        android:id="@+id/playBt"
+        android:layout_width="272dp"
+        android:layout_height="112dp"
+        android:layout_below="@+id/gameRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:background="@drawable/gradient"
+        android:onClick="PLAY"
+        android:text="Go"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        android:visibility="visible"
+        app:backgroundTint="@color/teal_200">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="Correct!"
+        android:textColor="#FBC02D"
+        android:textSize="80sp"
+        android:visibility="invisible">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/finalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold|italic"
+        android:textColor="@color/green"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="cursive"
+        android:textSize="50sp"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gameRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/gradient"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="invisible">
+
+    </Button>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6611402119785086/2710199295">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
+
